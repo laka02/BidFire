@@ -111,7 +111,7 @@
             </div>
           </div>
           <div class="button-container">
-            <button class="place-bid-button">Place a Bid</button>
+            <button class="place-bid-button" id="placeBidBtn">Place a Bid</button>
             <button class="clear-button">Cancel</button>
         </div>
         </div>
@@ -135,10 +135,10 @@
       <h4>Site Navigation</h4>
       <nav class="site-navigation">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Items</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="item.html">Items</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -162,6 +162,14 @@
         </div>
     </div>
   </footer>
-   <script src="script.js"></script>
+   <script>
+      // Handle Place a Bid button click
+      document.getElementById('placeBidBtn').addEventListener('click', function() {
+          // Store flag in sessionStorage to show popup on index page
+          sessionStorage.setItem('showBidSuccess', 'true');
+          // Redirect to home page
+          window.location.href = 'index.html';
+      });
+   </script>
 </body> 
 </html>

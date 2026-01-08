@@ -297,6 +297,45 @@
           </div>
       </div>
     </footer>
+   
+   <!-- Bid Success Popup -->
+   <div id="bidSuccessPopup" class="bid-success-popup">
+      <div class="bid-success-content">
+         <span class="bid-success-close">&times;</span>
+         <div class="bid-success-icon">
+            <i class="fa-solid fa-check-circle"></i>
+         </div>
+         <h2>Bid Placed Successfully!</h2>
+         <p>Your bid has been submitted. We'll notify you if you win the auction.</p>
+         <button class="bid-success-btn">OK</button>
+      </div>
+   </div>
+   
+   <script>
+      // Show bid success popup if coming from bidpage
+      window.addEventListener('DOMContentLoaded', function() {
+          if (sessionStorage.getItem('showBidSuccess') === 'true') {
+              document.getElementById('bidSuccessPopup').style.display = 'flex';
+              sessionStorage.removeItem('showBidSuccess');
+          }
+          
+          // Close popup when clicking X or OK button
+          document.querySelector('.bid-success-close').addEventListener('click', function() {
+              document.getElementById('bidSuccessPopup').style.display = 'none';
+          });
+          
+          document.querySelector('.bid-success-btn').addEventListener('click', function() {
+              document.getElementById('bidSuccessPopup').style.display = 'none';
+          });
+          
+          // Close popup when clicking outside
+          document.getElementById('bidSuccessPopup').addEventListener('click', function(e) {
+              if (e.target === this) {
+                  this.style.display = 'none';
+              }
+          });
+      });
+   </script>
    <script src="script.js"></script> 
 </body> 
 </html>
