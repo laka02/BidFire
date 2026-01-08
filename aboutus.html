@@ -1,0 +1,151 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidfire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>   
+<body>
+   <section id="header">
+      <a href="#"><img src="images/logo.png" class="logo"></a>
+      <div>
+         <ul id="navbar">
+             <li><a href="index.html">Home</a></li>
+             <li><a class="active" href="aboutus.html">About Us</a></li>
+             <li><a href="item.html">Items</a></li>
+             <li><a href="contactus.html">Contact Us</a></li>
+             <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+         </ul>
+      </div>
+   </section>
+  <section id="page-header">
+    <h1>About Us</h1>
+    <p>Discover the power of seamless bidding with Bidfire</p>
+    <script>
+      // image slider about header
+      let pageHeader = document.getElementById("page-header");
+  
+      const images = [
+          {img:'linear-gradient(rgba(0,0,0,0.616),rgba(0, 0, 0, 0.616)),url("images/banner1.jpg")'},
+          {img:'linear-gradient(rgba(0,0,0,0.616),rgba(0, 0, 0, 0.616)),url("images/banner4.jpg")'},
+          {img:'linear-gradient(rgba(0,0,0,0.616),rgba(0, 0, 0, 0.616)),url("images/banner6.jpg")'},
+      ];
+  
+      let currentSlide = 0;
+  
+      function slideMove(){
+          let item = images[currentSlide];
+          if(currentSlide === 2){
+              currentSlide = 0;
+          }
+          else{
+              currentSlide++;
+          }
+          pageHeader.style.backgroundImage = item.img;
+      }
+  
+      let slider;
+      slider = setInterval(slideMove,3000);
+    </script>  
+  </section>
+  <section id="ranked1" class="section-p1">
+    <h3>Our Journey</h3>
+    <p>Get know about us </p>
+    <div class="about-box">
+      <div class="box">
+          <i class="fas fa-lightbulb"></i>
+          <h3 class="box-title">Founding Principles</h3>
+          <p class="box-description">
+            At BidFire, our founding principles guide everything we do. We believe in transparency, fairness, and innovation, driving us to create a level playing field.</p>
+      </div>
+      <div class="box">
+          <i class="fas fa-trophy"></i>
+          <h3 class="box-title">Milestones & Achievements</h3>
+          <p class="box-description">Throughout our journey, we've achieved significant milestones. From expanding our user base to launching new features, we're proud of our accomplishments.</p>
+      </div>
+      <div class="box">
+          <i class="fas fa-exclamation-triangle"></i>
+          <h3 class="box-title">Challenges</h3>
+          <p class="box-description">Like any company, we've faced challenges along the way. However, we see challenges as opportunities for growth and improvement.</p>
+      </div>
+  </div>
+  </section>
+  <section id="ranked1" class="section-p1">
+    <h3>Who we are</h3>
+    <p>Our success & How it's going</p>
+    <div class="about-us">
+      <div class="box user-reviews">
+        <div class="number">8.5</div>
+        <div class="label">User Reviews</div>
+      </div>
+      <div class="box users">
+        <div class="number">10k</div>
+        <div class="label">Users</div>
+      </div>
+      <div class="box income">
+        <div class="number">10M+</div>
+        <div class="label">Income Each Year</div>
+      </div>
+    <div>
+  </section>
+  <section id="ranked1" class="section-p1">
+    <div class="mission-container">
+      <div class="mission-text">
+          <h2>Our Mission</h2>
+          <p>Our mission at BidFire is to revolutionize the bidding process with transparency, fairness, and innovation. From our humble beginnings, we've prioritized these values, evolving into a leader in the industry. Today, we stand committed to refining our platform and services to meet the ever-changing needs of our customers. Looking ahead, our passion for innovation drives us to empower businesses and individuals, envisioning a future where bidding is accessible, efficient, and inclusive for all.</p>
+      </div>
+      <div class="mission-image">
+          <img src="images/meeting.jpg" alt="Mission Image">
+      </div>
+  </div>
+  </section>
+   <!---footer section-->
+   <footer class="footer">
+    <div class="footer-column">
+      <div class="logo">
+        <img src="images/logo1.png" alt="Logo">
+      </div>
+      <div class="social-media">
+       <a href="#" class="social-icon"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  
+    <div class="footer-column">
+      <h4>Site Navigation</h4>
+      <nav class="site-navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="item.html">Items</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <div class="contact-info">
+        <div class="phone">
+          <i class="fa fa-phone"></i> +1 (123) 456-7890
+        </div>
+        <div class="email">
+          <i class="fa fa-envelope"></i> info@bidfire.com
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-column">
+       <div class="search-box">
+          <input type="text" placeholder="Search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+  </footer>
+   <script src="script.js"></script>
+</body> 
+</html>

@@ -1,0 +1,141 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidfire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>   
+<body bgcolor="#eeeeee">
+   <section id="header">
+      <a href="#"><img src="images/logo.png" class="logo"></a>
+      <div>
+         <ul id="navbar">
+             <li><a href="index.html">Home</a></li>
+             <li><a href="aboutus.html">About Us</a></li>
+             <li><a href="item.html">Items</a></li>
+             <li><a href="contactus.html">Contact Us</a></li>
+             <li><a  class="active" href="login.html"><i class="fa-solid fa-user"></i></a></li>
+         </ul>
+      </div>
+   </section>
+   <!--form section-->
+   <section class="container-forms" class="section-p1">
+    <div class="form-login">
+      <div class="form-content">
+        <header class="header-1">Login</header>
+        <form action="#" class="form-2">
+          <div class="field input-field">
+            <input type="name" placeholder="User Name" required>
+          </div>
+          <div class="field input-field">
+            <input type="email" placeholder="Email" required>
+          </div>
+          <div class="field input-field">
+            <input type="Password" placeholder="Password" required>
+          </div>
+          <div class="form-link">
+            <a href="password.html" class="forgot-password">Forgot Password ?</a>
+          </div>
+          <div class="field button-field">
+            <button onclick="location.href='useraccount.html'">Login</button>
+          </div>
+          <div class="form-link-1">
+            <span>Create a Bidfrie account?<a href="account.html" class="signup-link"> Create an account</a></span>
+          </div>
+          <div class="form-sign-2">
+            <span>Or login with </span>
+          </div>
+          <div class="icons-new-1">
+            <img src="images/facebook logo.png" alt="Social Media Logo 1" class="social-logo">
+            <img src="images/google logo.png" alt="Social Media Logo 2" class="social-logo">
+            <img src="images/xlogo.jpg" alt="Social Media Logo 1" class="social-logo">
+          </div>
+        </form>
+      </div>
+    </div>
+   </section>
+    <!-- Pop-up message -->
+    <div id="alert-message" class="alert">
+      <div class="alert-icon">
+         <i class="fas fa-exclamation-circle"></i>
+      </div>
+      <div class="alert-content">
+         <p>Do you want to change password now?</p>
+         <div class="alert-buttons">
+            <button id="btn-yes">Yes</button>
+            <button id="btn-no">No</button>
+         </div>
+      </div>
+   </div>
+   <!---footer section-->
+   <footer class="footer">
+    <div class="footer-column">
+      <div class="logo">
+        <img src="images/logo1.png" alt="Logo">
+      </div>
+      <div class="social-media">
+       <a href="#" class="social-icon"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  
+    <div class="footer-column">
+      <h4>Site Navigation</h4>
+      <nav class="site-navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="item.html">Items</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <div class="contact-info">
+        <div class="phone">
+          <i class="fa fa-phone"></i> +1 (123) 456-7890
+        </div>
+        <div class="email">
+          <i class="fa fa-envelope"></i> info@bidfire.com
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-column">
+       <div class="search-box">
+          <input type="text" placeholder="Search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+  </footer>
+  <script>
+    // This javascript code was developed with the help of W3School 
+
+    document.querySelector(".forgot-password").addEventListener("click", function(event) {
+       event.preventDefault(); 
+
+       // Display the pop-up message
+       document.getElementById("alert-message").style.display = "block";
+    });
+
+   
+    document.getElementById("btn-yes").addEventListener("click", function() {
+       // Redirect to forgot password page
+       window.location.href = "password.html";
+    });
+
+    
+    document.getElementById("btn-no").addEventListener("click", function() {
+       // Hide the pop-up message
+       document.getElementById("alert-message").style.display = "none";
+    });
+ </script>
+   <script src="script.js"></script>
+</body> 
+</html>
